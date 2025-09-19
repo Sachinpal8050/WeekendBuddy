@@ -15,6 +15,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.weekendbuddy.ui.theme.WeekendBuddyTheme
 import androidx.compose.ui.unit.dp
+import androidx.navigation.compose.rememberNavController
+import com.example.weekendbuddy.navigation.AppNavHost
+import com.example.weekendbuddy.ui.screens.splash.SplashScreen
 
 
 class MainActivity : ComponentActivity() {
@@ -22,14 +25,8 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            WeekendBuddyTheme {
-                Scaffold(modifier = Modifier.fillMaxSize(), containerColor = Color.Red) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
-            }
+            val navController = rememberNavController()
+            AppNavHost(navController=navController)
         }
     }
 }

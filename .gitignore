@@ -1,15 +1,48 @@
-*.iml
-.gradle
-/local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
-.DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
+# Gradle
+.gradle/
+build/
+!gradle-wrapper.jar
+.gradle/
+**/build/
+
+# Local configuration
 local.properties
+*.iml
+
+# IntelliJ / Android Studio
+.idea/
+*.ipr
+*.iws
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# NDK / CMake / external builds
+.cxx/
+.externalNativeBuild/
+
+# Captures (Android Studio screenshots, etc.)
+captures/
+
+# Generated files
+gen/
+out/
+
+# Crashlytics / Firebase
+fabric.properties
+crashlytics.properties
+crashlytics-build.properties
+
+# Keystore files (if you want to avoid pushing signing keys)
+*.jks
+*.keystore
+
+# Misc
+*.apk
+*.ap_
+*.dex
+*.class
